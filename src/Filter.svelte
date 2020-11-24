@@ -4,5 +4,5 @@
 </script>
 
 <div class="m-3">
-  {label} <input class="border" bind:value={filter} />
+  <p>{label}</p> <input class="border" bind:value={filter} />
 </div>
