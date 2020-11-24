@@ -4,9 +4,9 @@
   export let skill: Skill;
   export let tool: string;
 
-  const names = inputs.map(i => `${i['num']} ${i['name']}`);
-  const skillDisplay = skill ? `${skill['name']} Level ${skill['level']}` : null;
-  const combined = [...names, tool, skillDisplay].filter(n => n).join(' + ')
+  $: names = inputs.map(i => `${i['num']} ${i['name']}`);
+  $: skillDisplay = skill ? `${skill['name']} Level ${skill['level']}` : null;
+  $: combined = [...names, tool, skillDisplay].filter(n => n).join(' + ')
 </script>
 
 <td class="border border-gray-600">

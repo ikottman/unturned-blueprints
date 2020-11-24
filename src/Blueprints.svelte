@@ -1,9 +1,7 @@
 <script lang="ts">
   import Inputs from "./Inputs.svelte";
   import Output from "./Output.svelte";
-  export let blueprints;
-
-  const recipes = blueprints.flatMap(blueprint => blueprint['recipes'])
+  export let recipes;
 </script>
 
 <table class="table-auto bg-gray-100">
