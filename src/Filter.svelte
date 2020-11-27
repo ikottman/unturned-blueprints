@@ -1,8 +1,7 @@
 <script lang="ts">
   export let filter = '';
-  export let label;
 </script>
 
-<div class="m-3">
-  <p>{label}</p> <input class="border" bind:value={filter} />
-</div>
+<td class='border border-gray-600'>
+    <input class="w-full" placeholder=" Type here to filter" bind:value={filter} />
+</td>

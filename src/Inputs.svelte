@@ -6,11 +6,14 @@
 
   $: names = inputs.map(i => `${i['num']} ${i['name']}`);
   $: skillDisplay = skill ? `${skill['name']} Level ${skill['level']}` : null;
-  $: combined = [...names, tool, skillDisplay].filter(n => n).join(' + ')
+  $: combined = [...names, tool, skillDisplay].filter(n => n)
 </script>
 
 <td class="border border-gray-600">
   <div class="mx-1 my-1.5">
-    {combined}
+    {#each combined as input}
+      {input}
+      <br/>
+    {/each}
   </div>
 </td>
